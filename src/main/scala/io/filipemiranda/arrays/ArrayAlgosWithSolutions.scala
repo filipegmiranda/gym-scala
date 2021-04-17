@@ -22,4 +22,27 @@ object ArrayAlgosWithSolutions {
     inputArray.slice(leftIndex, rightIndex + 1)//inclusive
   }
 
+  def findMaxSumSubArray(inputArray: Array[Int]): Array[Int] = {
+    assume(inputArray != null && inputArray.length > 0)
+    var currentSum = 0
+    var bestSum = 0
+    var currentLeftIndex = 0
+    var maxLeftIndex, maxRightIndex = 0
+    for (i <- inputArray.indices) {
+      currentSum += inputArray(i)
+      if (currentSum > 0) {
+        if (currentSum >= bestSum) {
+          bestSum = currentSum
+          maxRightIndex = i
+          maxLeftIndex = currentLeftIndex
+        }
+      } else {
+        currentLeftIndex = i + 1
+        currentSum = 0
+      }
+    }
+    inputArray.slice(maxLeftIndex, maxRightIndex + 1)
+  }
+
+
 }
