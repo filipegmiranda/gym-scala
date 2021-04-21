@@ -1,6 +1,6 @@
 package io.filipemiranda.arrays
 
-object ArrayAlgosWithSolutions {
+object FindMaxSubArrayAlgo {
 
   def findSubArrayMaxSumBruteForce(inputArray: Array[Int]): Array[Int] = {
     assume(inputArray != null && inputArray.length > 0)
@@ -43,6 +43,8 @@ object ArrayAlgosWithSolutions {
     }
     inputArray.slice(maxLeftIndex, maxRightIndex + 1)
   }
+
+
 
 
 }
