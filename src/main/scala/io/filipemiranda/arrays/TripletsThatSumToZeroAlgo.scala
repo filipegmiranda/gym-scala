@@ -3,7 +3,7 @@ package io.filipemiranda.arrays
 import scala.util.control.Breaks
 
 object TripletsThatSumToZeroAlgo {
-
+  //todo check https://codereview.stackexchange.com/questions/260132/is-my-function-to-find-triplets-in-scala-running-in-on2?noredirect=1#comment513624_260132
   def tripletsFromArrayThatSumZero(input: Array[Int]): Array[Array[Int]] = {
     val target = 0 // the target is the number after the sum
     val sortedArray = input.sorted
